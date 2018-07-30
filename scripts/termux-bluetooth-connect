@@ -3,7 +3,7 @@ set -e -u
 
 SCRIPTNAME=termux-bluetooth-connect
 show_usage () {
-    echo "Usage: $SCRIPTNAME"
+    echo "Usage: $SCRIPTNAME [string_uuid]"
     echo "Connect to the given uuid."
     exit 0
 }
@@ -19,4 +19,11 @@ shift $(($OPTIND-1))
 
 if [ $# != 0 ]; then echo "$SCRIPTNAME: too many arguments"; exit 1; fi
 
-/data/data/com.termux/files/usr/libexec/termux-api BluetoothConnect
+
+CMD="/data/data/com.termux/files/usr/libexec/termux-api BluetoothConnect $PARAMS"
+
+if [ $# = 0 ]; then
+    $CMD
+else
+    echo $@ | $CMD
+fi
