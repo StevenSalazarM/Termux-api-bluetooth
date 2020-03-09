@@ -7,6 +7,12 @@ So I added two possible shell calls in /scripts directory: termux-bluetooth-scan
 
 I had to add a BluetoothAPI Class to [Termux:API android-java repository](https://github.com/termux/termux-api) and modify also the TermuxApiRecivier class in order to make the application call the functions (in BluetoothAPI) to connect and scan.
 
-
 In the BluetoothAPI class you just have to write the java code to scan bluetooth devices and to connect to them, you can follow the guide in Android Developer official website https://developer.android.com/guide/topics/connectivity/bluetooth. Also you can follow the WifiApi.java file as a guide to create the BluetoothAPi.java
+
+
+# Usage
+
+You should have the android termux app (modified, with an extra class BluetoothAPI.java and TermuxApiReceiver.java that accepts the two commands we introduced in this shell repository), then install this termux-api-package manually (this is not the official termux-api-package) and then you should be able to use termux-bluetooth-connect, termux-bluetooth-scaninfo.
+
+Thanks to the modifications you introduced in TermuxApiReceiver you should be able to call your scan and info methods inside the class BluetoothAPI.java.
 
