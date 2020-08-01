@@ -14,11 +14,26 @@ The implementation of connect is still missing and you can also modify the behav
 
 # Usage
 
+### Build and generate the APK
+
  1) Clone the project in [termux-app-bluetooth](https://github.com/StevenSalazarM/termux-app-bluetooth)
  2) Generate your own apk from the code
  3) Install the apk generated
  4) Open the application and wait for the termux console to be installed (it downloads the binary of termux-api-package available [here](https://github.com/StevenSalazarM/Termux-api-bluetooth/releases/tag/binary3))
  5) Open Termux console by clicking on the button (check *screenshots* directory)
- 6) type *termux-bluetooth-scaninfo* and give the permissions
- 7) type *termux-bluetooth-scaninfo* again to start to scan bluetooth devices
- 8) type *termux-bluetooth-scaninfo* again to stop the scanning (**remember to stop the scanning otherwise a broadcast receiver will stay alive**) and print the results.
+ 6) Type *termux-bluetooth-scaninfo* and give the permissions
+ 7) Type *termux-bluetooth-scaninfo* again to start to scan bluetooth devices
+ 8) Type *termux-bluetooth-scaninfo* again to stop the scanning (**remember to stop the scanning otherwise a broadcast receiver will stay alive**) and print the results.
+
+### Usage from APK released [here](https://github.com/StevenSalazarM/termux-app-bluetooth/releases/tag/v0.1)
+
+ 1) Download termux-app-bluetooth.apk
+ 2) Install the apk generated (you may need to disable PlayProtect)
+ 3) Open the application and wait for the termux console to be installed (it downloads the binary of termux-api-package available [here](https://github.com/StevenSalazarM/Termux-api-bluetooth/releases/tag/binary3))
+ 4) Open Termux console by clicking on the button (check *screenshots* directory)
+ 5) Type *termux-bluetooth-scaninfo* and give the permissions
+ 6) Type *termux-bluetooth-scaninfo* again to start to scan bluetooth devices
+ 7) Type *termux-bluetooth-scaninfo* again to stop the scanning (**remember to stop the scanning otherwise a broadcast receiver will stay alive**) and print the results.
+
+### Contact
+If you have any question (or problem) feel free to post it in Issues section or contact me at stevensalazarmolina@gmail.com
