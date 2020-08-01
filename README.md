@@ -5,11 +5,11 @@ In order to allow bluetooth function calls I modified the [shell Termux-API repo
 
 The command termux-bluetooth-scaninfo is used to call the functions startDiscovery and cancelDiscovery from the *BluetoothAdapter java class*.
 
-The command termux-bluetooth-connect is used to call a function that has an empty implemetation (for now), you can decide what it should do by introducing your code in the function [onReceiveBluetoothConnect](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/1b2112e1eed8e1edb528327ec9d84914075e5d87/app/src/main/java/com/termux/api/BluetoothAPI.java#L104).
+The command termux-bluetooth-connect is used to call a function that has an empty implemetation (for now), you can decide what it should do by introducing your code in the function [onReceiveBluetoothConnect](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java#L106).
 
 An BluetoothAPI class was added in [Termux:API android-java repository](https://github.com/termux/termux-api). Futhermore, TermuxApiReceiver class was modified in order to make the application call the functions to scan and connect.
 
-The implementation of connect is still missing and you can also modify the behaviour of scaninfo by writing your own java code in [BluetoothAPI](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/1b2112e1eed8e1edb528327ec9d84914075e5d87/app/src/main/java/com/termux/api/BluetoothAPI.java).
+The implementation of connect is still missing and you can also modify the behaviour of scaninfo by writing your own java code in [BluetoothAPI](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java).
 
 
 # Usage
