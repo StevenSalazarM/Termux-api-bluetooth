@@ -1,5 +1,5 @@
 # termux-api-package
-Termux package containing scripts to call exposed API methods in the [Termux:API](https://github.com/termux/termux-api) app. The idea behind this package is to introduce bluetooth commands in the official termux-api-package in order to call methods of a modified version of [Termux:API](https://github.com/termux/termux-api), currently it doesn't work with BLE but it should be possible to introduce BLE inside a java class in [Termux-app-bluetooth](https://github.com/StevenSalazarM/termux-app-bluetooth). The repository just mentioned is a modified version of an old version of the Termux project (**Termux-app-bluetooth is not official**).
+Termux package containing scripts to call exposed API methods in the [Termux:API](https://github.com/termux/termux-api) app. The idea behind this package is to introduce bluetooth commands in the official termux-api-package in order to call methods of a modified version of [Termux:API](https://github.com/termux/termux-api), you can find two java classes BluetoothAPI and BluetoothLowEnergyAPI (this one under the branch dev-ble) in [Termux-app-bluetooth](https://github.com/StevenSalazarM/termux-app-bluetooth). The repository just mentioned is a modified version of an old version of the Termux project (**Termux-app-bluetooth is not official**).
 
 In order to allow bluetooth function calls I modified the [shell Termux-API repository](https://github.com/termux/termux-api-package), two possible shell calls were added in *scripts* directory: termux-bluetooth-scaninfo and termux-bluetooth-connect (*ignore termux-enable-buttons*).
 
@@ -7,10 +7,11 @@ The command termux-bluetooth-scaninfo is used to call the functions startDiscove
 
 The command termux-bluetooth-connect is used to call a function that has an empty implemetation (for now), you can decide what it should do by introducing your code in the function [onReceiveBluetoothConnect](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java#L106).
 
-An BluetoothAPI class was added in [Termux:API android-java repository](https://github.com/termux/termux-api). Futhermore, TermuxApiReceiver class was modified in order to make the application call the functions to scan and connect.
+A BluetoothAPI class was added in [Termux:API android-java repository](https://github.com/termux/termux-api). Futhermore, TermuxApiReceiver class was modified in order to make the application call the functions to scan and connect.
 
 The implementation of connect is still missing and you can also modify the behaviour of scaninfo by writing your own java code in [BluetoothAPI](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java).
 
+In addition to the BluetoothAPI class it was introduced also another class [BluetoothLowEnergyAPI](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/dev-ble/app/src/main/java/com/termux/api/BluetoothLowEnergyAPI.java). This class is under the dev-ble branch and it hasnt been merged to master due to the lack of bluetooth low enegery devices for testing. 
 
 # Usage
 
