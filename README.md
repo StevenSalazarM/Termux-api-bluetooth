@@ -36,5 +36,11 @@ In addition to the BluetoothAPI class it was introduced also another class [Blue
  6) Type *termux-bluetooth-scaninfo* again to start to scan bluetooth devices
  7) Type *termux-bluetooth-scaninfo* again to stop the scanning (**remember to stop the scanning otherwise a broadcast receiver will stay alive**) and print the results.
 
+### Usage example
+At the moment it shows only devices name but you can [add more info](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java#L36) to be printed.
+
+![](https://github.com/StevenSalazarM/Termux-api-bluetooth/blob/master/screenshots/termux-bluetooth-scaninfo-release.jpeg)
+
+
 ### Contact
 If you have any question (or problem) feel free to post it in Issues section or contact me at stevensalazarmolina@gmail.com
