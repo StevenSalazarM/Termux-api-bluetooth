@@ -39,7 +39,7 @@ In addition to the BluetoothAPI class it was introduced also another class [Blue
 ### Usage example
 At the moment it shows only devices name but you can [add more info](https://github.com/StevenSalazarM/termux-app-bluetooth/blob/master/app/src/main/java/com/termux/api/BluetoothAPI.java#L36) to be printed.
 
-![](https://github.com/StevenSalazarM/Termux-api-bluetooth/blob/master/screenshots/termux-bluetooth-scaninfo-release.jpeg)
+<p align="center"><img src="https://github.com/StevenSalazarM/Termux-api-bluetooth/blob/master/screenshots/termux-bluetooth-scaninfo-release.jpeg"  height="50%" width="25%" ></p>
 
 
 ### Contact
