@@ -41,6 +41,21 @@ At the moment it shows only devices name but you can [add more info](https://git
 
 <p align="center"><img src="https://github.com/StevenSalazarM/Termux-api-bluetooth/blob/master/screenshots/termux-bluetooth-scaninfo-release.jpeg"  height="50%" width="25%" ></p>
 
+### Possible Problem
+If you are getting message below probably you used a command inside termux console that required to update or install a package.
+```sh
+E: This installation run will require temporarily removing the essential package libandroid-support:aarch64 due to a Conflicts/Pre-Depends loop. This is often bad, but if you really want to do it, activate the APT::Force-LoopBreak option.
+E: Internal Error, Could not early remove libandroid-support:aarch64 (2)
+```
+The reason of the problem can be found in  [Termux-Package issue 4129](https://github.com/termux/termux-packages/issues/4129#issuecomment-519487869).
+
+>Hmm, there happens following:
+   >- Few months ago iconv() implementation was moved from libandroid-support to libiconv. But since old libandroid-support provides libiconv.so symlink used by essential utilities (like coreutils), package libiconv can't be installed.
+   >- Now busybox was replaced by separate packages which makes coreutils to be required for installation. So here a conflict loop starts to happen.
+
+Thus, since the apk in [Termux-app-bluetooth](https://github.com/StevenSalazarM/termux-app-bluetooth) is based on the version 0.64 of the Termux project you must install a more recent version of it. 
+
+_However, after September, I will try to work on a new version of Termux-app-bluetooth that supports update or installation of packages._
 
 ### Contact
 If you have any question (or problem) feel free to post it in Issues section or contact me at stevensalazarmolina@gmail.com
