@@ -55,7 +55,7 @@ The reason of the problem can be found in  [Termux-Package issue 4129](https://g
 
 Thus, since the apk in [Termux-app-bluetooth](https://github.com/StevenSalazarM/termux-app-bluetooth) is based on the version 0.64 of the Termux project you must install a more recent version of it. 
 
-_However, after September, I will try to work on a new version of Termux-app-bluetooth that supports update or installation of packages._
+_However, ~~after September~~ when I get some free time, I will try to work on a new version of Termux-app-bluetooth that supports update or installation of packages._
 
 ### Contact
 If you have any question (or problem) feel free to post it in Issues section or contact me at stevensalazarmolina@gmail.com
